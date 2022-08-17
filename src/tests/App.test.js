@@ -19,15 +19,12 @@ describe('Componente App.js', () => {
   it('Teste se o link Home redireciona para a página inicial', () => {
     const { history } = renderWithRouter(<App />);
     const homeLink = screen.getByRole('link', { name: 'Home' });
-    // const homeHeading = screen
-    //   .queryByRole('heading', { name: 'Encountered pokémons' });
 
     expect(homeLink).toBeInTheDocument();
     userEvent.click(homeLink);
     const { location: { pathname } } = history;
 
     expect(pathname).toBe('/');
-    // expect(homeHeading).toBeInTheDocument();
   });
 
   it('Teste se o link About redireciona para "About"', () => {

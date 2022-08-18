@@ -4,7 +4,6 @@ import userEvent from '@testing-library/user-event';
 import renderWithRouter from '../renderWithRouter';
 import Pokedex from '../pages/Pokedex';
 import pokemons from '../data';
-// import App from '../App';
 
 describe('Componente Pokedex.js', () => {
   const defaultValue = {
@@ -19,7 +18,7 @@ describe('Componente Pokedex.js', () => {
     151: false,
   };
 
-  it('Teste se a página contém um heading h2 com o texto "Encountered pokémons"', () => {
+  it('Testa se a página contém um heading h2 com o texto "Encountered pokémons"', () => {
     renderWithRouter(<Pokedex
       pokemons={ pokemons }
       isPokemonFavoriteById={ defaultValue }
